@@ -62,11 +62,11 @@ footer{
 
 .tituloIntro, .tituloImg{
     color: rgb(0, 48, 0);
+    font-size: 28px;
 }
 
 .tituloImg{
     text-align: center;
-    font-size: 35px;
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 7px;
 }
@@ -105,7 +105,6 @@ footer{
 .tituloIntro{
     margin-top: 5px;
     text-align: center;
-    font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -200,7 +199,6 @@ footer{
     padding: 3px 7px;
     border-radius: 15px;
     background-color: #fff;
-    transition: all 0.1s ease-in;
     margin-top: 15px;
     margin-bottom: 20px;
 } 
@@ -216,6 +214,65 @@ button{
 
 .h3News{
     font-size: 27px;
+}
+
+/*contacto html*/
+
+.mainContacto{
+    background-image: url(https://images.pexels.com/photos/1358900/pexels-photo-1358900.jpeg?cs=srgb&dl=pexels-rene-asmussen-1358900.jpg&fm=jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+}
+
+.contenedorTituloContacto{ 
+    margin-top: 50px;
+    width: 90%;
+}
+
+.padingInfo{
+    padding-left: 5px;
+}
+
+textarea{
+    margin-top: 10px;
+}
+
+.inputInfo{
+    margin-bottom: 15px;
+}
+
+.tituloContacto{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(7, 61, 0);
+}
+
+.info{
+    border: 5px solid rgb(52, 211, 123);
+    background-color: rgb(199, 255, 199);
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 23px 15px 15px;
+    width: 260px;
+}
+
+.contFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media(min-width: 768px){
@@ -260,9 +317,23 @@ button{
     .sectionFooter{
         width: 90%;
     }
+
+    .tituloImg, .tituloIntro{
+        font-size: 35px;
+    }
+
+    /*Contacto html*/
+
+    .info{
+        width: 320px;
+    }
+
+    .contenedorTituloContacto{
+        width: 80%;
+    }
 }
 
-@media(min-width: 1024px){
+@media(min-width: 992px){
 
     .titulo{
         margin-left: 10px;
@@ -275,14 +346,6 @@ button{
     .h3Section2Inicio{
         margin: 35px 0px 1em 30px;
         text-align: start;
-    }
-
-    h1{
-        transition: all 0.1s ease;
-    }
-
-    h1:hover{
-        color: rgb(73, 199, 0);
     }
     
     .spann{
@@ -305,16 +368,16 @@ button{
     .boton:hover{
         padding: 3px 30px;
     }
+    
+    .contRedes:hover, .info:hover{
+        box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
+    }
 
-    .contRedes{
+    .boton{
         transition: all 0.1s ease-in;
     }
-    
-    .contRedes:hover{
-        box-shadow: 0px 0px 12px 3px rgb(68, 255, 68);
-    }
 
-    .imgFooter{
+    .imgFooter, .info, .boton, .contRedes{
         transition: all 0.1s ease-in;
     }
 
@@ -336,5 +399,30 @@ button{
         background-color: rgb(156, 240, 135);
         box-shadow: 0px 0px 5px 1px rgb(34, 133, 34);
     }
+
+    /*Contacto html*/
+
+    .mainContacto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 1000px;
+    }
+
+    .contenedorTituloContacto{
+        width: 35%;
+        height: 200px;
+        margin-bottom: 360px;
+    }
+
+    .contacto{
+        margin-right: 50px;
+    }
+
+    label:hover{
+        cursor: pointer;
+    }
+
 }
 
