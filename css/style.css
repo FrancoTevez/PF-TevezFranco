@@ -356,10 +356,6 @@ span{
     margin: 10px 0px;
 }
 
-.divAcordeonItem:(.collapsed){
-    height: 25px;
-}
-
 .accordion-item{
     padding-top: 0;
 
