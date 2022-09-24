@@ -275,6 +275,106 @@ textarea{
     align-items: center;
 }
 
+/*Jugos y Licuados html*/
+
+.divDiferencias{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.contParrafoDiferencias{
+    background-color: rgb(195, 255, 193);
+    padding: 10px 0px;
+    margin-top: 15px;
+}
+
+.sectionJugos{
+    width: 92%;
+}
+
+span{
+    color: rgb(28, 138, 0);
+}
+
+.gridJugos{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.contenedorImgJugos{
+    border: 4px solid rgb(52, 211, 123);
+    border-radius: 25px;
+    width: 245px;
+    padding-bottom: 8px;
+    background-color: rgb(138, 253, 138);
+    margin: 35px 0px;
+}
+
+.imgJugos{
+    height: 160px;
+    width: 100%;
+    border-bottom: 4px solid rgb(52, 211, 123);
+    border-radius: 21px;
+}
+
+.parrafoImgJugos{
+    margin: 10px 10px 12px;
+    color: rgb(1, 36, 1);
+}
+
+.liJugos{
+    color: rgb(21, 73, 1);
+    list-style-type: circle;
+    margin: 10px 0px;
+}
+
+/*Preguntas Frecuentes*/
+
+.divPreguntas{
+    margin-top: 35px;
+}
+
+.h2Preg{
+    margin-bottom: 25px;
+}
+
+.buttonAcordeon{
+    color: rgb(22, 109, 0);
+}
+
+.accordion-button:not(.collapsed){
+    color: rgb(22, 109, 0);
+    background-color: #fff;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.divAcordeonItem{
+    margin: 10px 0px;
+}
+
+.divAcordeonItem:(.collapsed){
+    height: 25px;
+}
+
+.accordion-item{
+    padding-top: 0;
+
+}
+
+button, input, optgroup, select, textarea{
+    margin-top: 0%;
+}
+
+@media(min-width: 580px){
+    .gridJugos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media(min-width: 768px){
     nav ul{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -331,12 +431,30 @@ textarea{
     .contenedorTituloContacto{
         width: 80%;
     }
+
+    /*Jugos y Licuados*/
+
+    .gridJugos{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contenedorImgJugos{
+        width: 300px;
+    }
+
+    .imgJugos{
+        height: 200px;
+    }
 }
 
 @media(min-width: 992px){
 
     .titulo{
         margin-left: 10px;
+    }
+
+    .secciones{
+        width: 80%;
     }
 
     .secciones, .seccionesImg{
@@ -369,15 +487,11 @@ textarea{
         padding: 3px 30px;
     }
     
-    .contRedes:hover, .info:hover{
+    .contRedes:hover, .info:hover, .contenedorImgJugos:hover{
         box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
     }
 
-    .boton{
-        transition: all 0.1s ease-in;
-    }
-
-    .imgFooter, .info, .boton, .contRedes{
+    .imgFooter, .info, .boton, .contRedes, .contenedorImgJugos, .liJugos, .buttonAcordeon{
         transition: all 0.1s ease-in;
     }
 
@@ -395,7 +509,7 @@ textarea{
         border-radius: 5px;
     }
 
-    .liSection2Inicio:hover{
+    .liSection2Inicio:hover, .liJugos:hover{
         background-color: rgb(156, 240, 135);
         box-shadow: 0px 0px 5px 1px rgb(34, 133, 34);
     }
@@ -424,5 +538,50 @@ textarea{
         cursor: pointer;
     }
 
+    /*Jugos Y Licuados*/
+
+    .pDiferencias{
+        width: 75%;
+    }
+    
+    .liJugos{
+        padding: 3px 5px;
+        border-radius: 5px;
+        width: 95%;
+        margin: 5px 0px;
+    }
+
+    /*Preguntas Frecuentes*/
+
+    .divAcordeon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divAcordeonItem{
+        width: 85%;
+    }
+
+    .buttonAcordeon:hover{
+        box-shadow: 0px 0px 7px 1px rgb(6, 53, 0); 
+    }
+}
+
+@media(min-width:1440px){
+    
+    /*Para los contenedores de Jugos y Licuados*/
+
+    .gridJugos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .contenedorImgJugos{
+        width: 360px;
+    }
+
+    .imgJugos{
+        height: 240px;
+    } 
 }
 
