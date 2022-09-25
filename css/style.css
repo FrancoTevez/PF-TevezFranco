@@ -28,6 +28,14 @@ nav{
     font-size: 32px;
 }
 
+.aJugosVerdes{
+    color: rgb(0, 139, 46);
+}
+
+.aJugosVerdes:hover{
+    color: rgb(14, 56, 14);
+}
+
 .iconoVida{
     width: 40px;
     height: 40px;
