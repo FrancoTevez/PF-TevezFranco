@@ -530,6 +530,10 @@ button, input, optgroup, select, textarea{
         margin-left: 10px;
     }
 
+    .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover{
+        box-shadow: 0px 0px 7px 1px rgb(14, 56, 14);
+    }
+
     .secciones{
         width: 80%;
     }
@@ -552,12 +556,6 @@ button, input, optgroup, select, textarea{
         color: rgb(71, 255, 47);
         border: 1px solid rgb(75, 202, 75);
         border-radius: 15px;
-        transition: all 0.1s ease-in;
-    }
-
-    li a:hover{
-        border-color: rgb(14, 56, 14);
-        box-shadow: 0px 0px 7px 0px rgb(14, 56, 14);
     }
 
     .boton:hover{
@@ -568,7 +566,7 @@ button, input, optgroup, select, textarea{
         box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
     }
 
-    .imgFooter, .info, .boton, .contRedes, .contenedorImgJugos, .liJugos, .buttonAcordeon, .contenedorRecetasBowls, .bowlToppingsContenedor{
+    .imgFooter, .info, .boton, .contRedes, .contenedorImgJugos, .liJugos, .buttonAcordeon, .contenedorRecetasBowls, .bowlToppingsContenedor, .liSection2Inicio{
         transition: all 0.1s ease-in;
     }
 
@@ -582,7 +580,6 @@ button, input, optgroup, select, textarea{
 
     .liSection2Inicio{
         padding: 3px 4px;
-        transition: all 0.1s ease-in;
         border-radius: 5px;
     }
 
