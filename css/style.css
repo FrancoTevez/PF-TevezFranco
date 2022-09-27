@@ -625,6 +625,10 @@ button, input, optgroup, select, textarea{
         margin: 5px 0px;
     }
 
+    .contenedorImgJugos:hover, .contenedorRecetasBowls:hover{
+        transform: scale(1.05);
+    }
+
     /*Preguntas Frecuentes*/
 
     .divAcordeonItem{
