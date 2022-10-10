@@ -260,12 +260,6 @@ textarea{
     margin-bottom: 15px;
 }
 
-.tituloContacto{
-    text-align: center;
-    font-size: 35px;
-    color: rgb(7, 61, 0);
-}
-
 .info{
     border: 5px solid rgb(52, 211, 123);
     background-color: rgb(199, 255, 199);
@@ -320,8 +314,6 @@ span{
 }
 
 .imgJugos{
-    height: 160px;
-    width: 100%;
     border-bottom: 4px solid rgb(52, 211, 123);
     border-radius: 21px;
 }
@@ -487,10 +479,6 @@ button, input, optgroup, select, textarea{
         width: 300px;
     }
 
-    .imgJugos{
-        height: 200px;
-    }
-
     /*Preguntas*/
 
     .divAcordeonItem{
@@ -650,16 +638,12 @@ button, input, optgroup, select, textarea{
 
     .contenedorImgJugos{
         width: 360px;
-    }
-
-    .imgJugos{
-        height: 240px;
     } 
 
     /*BOWLS*/
 
     .bowl{
-        width: 55%;
+        width: 85%;
     }
 
     .parrafoBowl{
