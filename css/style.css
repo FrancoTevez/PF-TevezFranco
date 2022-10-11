@@ -30,9 +30,10 @@ nav{
 
 .aJugosVerdes{
     color: rgb(0, 139, 46);
+    text-decoration: underline;
 }
 
-.aJugosVerdes:hover{
+.aJugosVerdes:active, .aJugosVerdes:visited{
     color: rgb(14, 56, 14);
 }
 
@@ -50,6 +51,8 @@ footer{
     padding-bottom: 1.5em;
     box-shadow: 0px 0px 7px 0px;
 }
+
+
 
 .contRedes{
     border: 3px solid rgb(0, 212, 71);
@@ -176,6 +179,10 @@ main{
     width: 35px;
     height: 35px;
     margin: 0px 20px;
+}
+
+.imgFooter:active ,button:active{
+    transform: scale(0.9);
 }
 
 .newsletter{
@@ -520,6 +527,10 @@ button, input, optgroup, select, textarea{
 
     .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover{
         box-shadow: 0px 0px 7px 1px rgb(14, 56, 14);
+    }
+
+    .aJugosVerdes:hover{
+        color: rgb(14, 56, 14);
     }
 
     .secciones{
