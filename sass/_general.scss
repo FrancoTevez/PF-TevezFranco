@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*NESTING*/
+
+body{
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/4397786/pexels-photo-4397786.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4397786.jpg&fm=jpg);
+    background-size: cover;
+    header{
+        
+        nav{
+            box-shadow: 0px 0px 7px 0px; 
+            
+            div{
+                
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+                
+                .vidaVerde{
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    font-family: 'Great Vibes', cursive;
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    footer{
+        background-color: #fff;
+        padding-bottom: 1.5em;
+        box-shadow: 0px 0px 7px 0px;
+        display: grid;
+        grid-template-areas: 
+        "seccionfooter"
+        "news";
+        grid-template-rows: 1fr;
+        justify-items: center;
+        gap: 20px 0px;
+        
+        .sectionFooter{
+            grid-area: seccionfooter;
+            margin-top: 15px;
+            width: 85%;
+            border: 3px solid rgb(0, 212, 71);
+            border-radius: 15px;
+            background-color: rgb(173, 255, 170);
+            padding: 25px 25px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            h3{
+                color: rgb(0, 48, 0);
+                font-size: 27px;
+            }
+            
+            div{
+                margin-top: 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                a{
+                    margin: 0px 25px 0px 25px;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        &:active{
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+            p{
+                color: rgb(22, 22, 22);
+                font-size: 16px;
+                margin-top: 30px;
+            }
+        }
+        .newsletter{
+            grid-area: news;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 85%;
+           
+            div{
+                border: 3px solid rgb(0, 212, 71);
+                border-radius: 15px;
+                background-color: rgb(173, 255, 170);
+                padding: 25px 25px 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                
+                h3{
+                    color: rgb(0, 48, 0);
+                    font-size: 27px;
+                }
+
+                input{
+                    margin-top: 14px;
+                    padding: 4px 0px 4px 5px;
+                    width: 85%;
+                }
+
+                button{
+                    border: 2px solid rgb(0, 212, 71);
+                    padding: 3px 7px;
+                    border-radius: 15px;
+                    background-color: #fff;
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+html{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    margin-top: 10px;
+    transition: all 0.1s ease;
+    &:active{
+        transform: scale(0.9);
+    }
+}
+
+.secciones{
+    width: 85%;
+    border: 3px solid rgb(0, 212, 71);
+    border-radius: 25px;
+    padding: 0.8em;
+    background-color: rgb(195, 255, 193);
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+
+.tituloIntro{
+    margin-top: 5px;
+    text-align: center;
+    color: rgb(0, 48, 0);
+    font-size: 28px;
+}
+

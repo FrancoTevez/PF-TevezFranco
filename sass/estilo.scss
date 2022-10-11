@@ -1,235 +1,28 @@
-*{
-    padding: 0;
-    margin: 0;
-}
 
-html{
-    font-family: 'Josefin Sans', sans-serif;
-}
+@import "general";
+@import "index";
+
 
 :root{
     --bs-font-sans-serif: ;
 }
 
-body{
-    height: 100vh;
-    background-image: url(https://images.pexels.com/photos/4397786/pexels-photo-4397786.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4397786.jpg&fm=jpg);
-    background-size: cover;
-}
-
-nav{
-    box-shadow: 0px 0px 7px 0px;
-}
-
-.vidaVerde{
-    margin-left: 10px;
-    margin-top: 10px;
-    font-family: 'Great Vibes', cursive;
-    font-size: 32px;
-}
-
-.aJugosVerdes{
-    color: rgb(0, 139, 46);
-    text-decoration: underline;
-}
-
-.aJugosVerdes:active, .aJugosVerdes:visited{
-    color: rgb(14, 56, 14);
-}
-
-.iconoVida{
-    width: 40px;
-    height: 40px;
-}
-
-a{
-    text-decoration: none;
-}
-
-footer{
-    background-color: #fff;
-    padding-bottom: 1.5em;
-    box-shadow: 0px 0px 7px 0px;
-}
 
 
 
-.contRedes{
-    border: 3px solid rgb(0, 212, 71);
-    border-radius: 15px;
-    background-color: rgb(173, 255, 170);
-    padding: 25px 25px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.pRedes{
-    color: rgb(22, 22, 22);
-    font-size: 16px;
-    margin-top: 30px;
-}
-
-.tituloIntro, .tituloImg{
-    color: rgb(0, 48, 0);
-    font-size: 28px;
-}
-
-.tituloImg{
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-top: 7px;
-}
-
-.secciones, .seccionesImg{
-    width: 85%;
-    border: 3px solid rgb(0, 212, 71);
-    border-radius: 25px;
-    padding: 0.8em;
-    background-color: rgb(195, 255, 193);
-    border-bottom-left-radius: 0%;
-    border-top-right-radius: 0%;
-}
-
-.fotoIntro{
-    width: 94%;
-    margin-top: 7px;
-    border-radius: 25px;
-    margin-bottom: 7px;
-}
 
 
-.seccionesImg{
-    grid-area: imagen; 
-    margin-top: 20px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.secciones{
-    grid-area: section;
-}
 
-.tituloIntro{
-    margin-top: 5px;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-}
 
-.parrafoIntro{
-    margin: 20px 5px 10px 5px;
-    color: rgb(3, 37, 0);
-    font-size: large;
-}
 
-footer{
-    grid-area: footer;
-}
 
-.gridSection{
-    grid-area: section2;
-}
 
-main{
-    display: grid;
-    grid-template-areas: 
-    "imagen"
-    "section"
-    "section2"
-    "footer";
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 20px;
-}
 
-.h3Section2Inicio{
-    margin: 20px 0px 1em 0px;
-    text-align: center;
-    color: rgb(1, 17, 0);
-}
 
-.liSection2Inicio{
-    list-style-type: disc;
-    color: rgb(0, 59, 13);
-    margin: 0px 15px 25px 0px; 
-    font-size: large;
-}
 
-.spanReemplazos{
-    color: rgb(0, 15, 3);
-}
 
-.sectionFooter{
-    grid-area: seccionfooter;
-    margin-top: 15px;
-    width: 85%;
-}
 
-.iconos{
-    margin-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.imgFooter{
-    width: 35px;
-    height: 35px;
-    margin: 0px 20px;
-}
-
-.imgFooter:active ,button:active{
-    transform: scale(0.9);
-}
-
-.newsletter{
-    grid-area: news;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 85%;
-}
-
-footer{
-    display: grid;
-    grid-template-areas: 
-    "seccionfooter"
-    "news";
-    grid-template-rows: 1fr;
-    justify-items: center;
-    gap: 20px 0px;
-}
-
-.inputFooter{
-    margin-top: 14px;
-    padding: 4px 0px 4px 5px;
-    width: 85%;
-}
-
-.boton{
-    border: 2px solid rgb(0, 212, 71);
-    padding: 3px 7px;
-    border-radius: 15px;
-    background-color: #fff;
-    margin-top: 15px;
-    margin-bottom: 20px;
-} 
-
-button{
-    margin-top: 10px;
-}
-
-.aDelFooter{
-    width: 30px;
-    margin-right: 45px;
-}
-
-.h3News{
-    font-size: 27px;
-}
 
 /*contacto html*/
 
@@ -526,7 +319,7 @@ button, input, optgroup, select, textarea{
     }
 
     .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover{
-        box-shadow: 0px 0px 7px 1px rgb(14, 56, 14);
+        box-shadow: 0px 0px 15px 0px rgb(1, 22, 1);
     }
 
     .aJugosVerdes:hover{
@@ -666,4 +459,3 @@ button, input, optgroup, select, textarea{
         margin-right: 30px;
     }
 }
-
