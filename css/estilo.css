@@ -22,6 +22,11 @@ body header nav div .vidaVerde {
   font-family: "Great Vibes", cursive;
   font-size: 32px;
 }
+@media (min-width: 768px) {
+  body header nav div ul li a {
+    padding: 4px 6px;
+  }
+}
 body footer {
   background-color: #fff;
   padding-bottom: 1.5em;
@@ -31,6 +36,11 @@ body footer {
   grid-template-rows: 1fr;
   justify-items: center;
   gap: 20px 0px;
+}
+@media (min-width: 768px) {
+  body footer {
+    grid-template-areas: "seccionfooter news";
+  }
 }
 body footer .sectionFooter {
   grid-area: seccionfooter;
@@ -43,6 +53,12 @@ body footer .sectionFooter {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  body footer .sectionFooter {
+    margin-top: 29px;
+    width: 90%;
+  }
 }
 body footer .sectionFooter h3 {
   color: rgb(0, 48, 0);
@@ -64,6 +80,12 @@ body footer .sectionFooter div a img {
 body footer .sectionFooter div a img:active {
   transform: scale(0.9);
 }
+@media (min-width: 768px) {
+  body footer .sectionFooter div a img {
+    width: 35px;
+    height: 35px;
+  }
+}
 body footer .sectionFooter p {
   color: rgb(22, 22, 22);
   font-size: 16px;
@@ -75,6 +97,12 @@ body footer .newsletter {
   flex-direction: column;
   align-items: center;
   width: 85%;
+}
+@media (min-width: 768px) {
+  body footer .newsletter {
+    margin-top: 30px;
+    width: 90%;
+  }
 }
 body footer .newsletter div {
   border: 3px solid rgb(0, 212, 71);
@@ -94,6 +122,11 @@ body footer .newsletter div input {
   margin-top: 14px;
   padding: 4px 0px 4px 5px;
   width: 85%;
+}
+@media (min-width: 768px) {
+  body footer .newsletter div input {
+    padding: 5px 50px 5px 5px;
+  }
 }
 body footer .newsletter div button {
   border: 2px solid rgb(0, 212, 71);
@@ -137,6 +170,59 @@ button:active {
   font-size: 28px;
 }
 
+.parrafoIntro {
+  margin: 20px 5px 10px 5px;
+  color: rgb(3, 37, 0);
+  font-size: large;
+}
+
+.contFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button, input, optgroup, select, textarea {
+  margin-top: 0%;
+}
+
+.h2Preg {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  li a {
+    padding: 4px 6px;
+  }
+  footer {
+    grid-template-areas: "seccionfooter news";
+  }
+  .newsletter {
+    margin-top: 30px;
+    width: 90%;
+  }
+  .sectionFooter {
+    margin-top: 29px;
+  }
+  .inputFooter {
+    padding: 5px 50px 5px 5px;
+  }
+  .secciones, .seccionesImg, .contRedes {
+    border: 4px solid rgb(0, 212, 71);
+  }
+  .seccionesImg {
+    width: 60%;
+  }
+  .sectionFooter {
+    width: 90%;
+  }
+  .tituloImg, .tituloIntro {
+    font-size: 35px;
+  }
+}
 main {
   display: grid;
   grid-template-areas: "imagen" "section" "section2";
@@ -219,11 +305,6 @@ main {
   color: rgb(0, 15, 3);
 }
 
-:root {
-  --bs-font-sans-serif: ;
-}
-
-/*contacto html*/
 .mainContacto {
   background-image: url(https://images.pexels.com/photos/1358900/pexels-photo-1358900.jpeg?cs=srgb&dl=pexels-rene-asmussen-1358900.jpg&fm=jpg);
   background-size: cover;
@@ -232,33 +313,60 @@ main {
   align-items: center;
   justify-content: space-around;
 }
-
-.contacto {
+@media (min-width: 992px) {
+  .mainContacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 1000px;
+  }
+}
+.mainContacto .contenedorTituloContacto {
+  margin-top: 50px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .mainContacto .contenedorTituloContacto {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .mainContacto .contenedorTituloContacto {
+    width: 35%;
+    height: 200px;
+    margin-bottom: 360px;
+  }
+}
+.mainContacto .contenedorTituloContacto h1 {
+  margin-bottom: 25px;
+}
+.mainContacto .contenedorTituloContacto p {
+  margin: 20px 5px 10px 5px;
+  color: rgb(3, 37, 0);
+  font-size: large;
+}
+@media (min-width: 768px) {
+  .mainContacto .contenedorTituloContacto p {
+    width: 70%;
+  }
+}
+.mainContacto .contacto {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 70px;
   margin-top: 40px;
 }
-
-.contenedorTituloContacto {
-  margin-top: 50px;
-  width: 90%;
+@media (min-width: 992px) {
+  .mainContacto .contacto {
+    margin-right: 50px;
+  }
 }
-
-.padingInfo {
-  padding-left: 5px;
-}
-
-textarea {
-  margin-top: 10px;
-}
-
-.inputInfo {
-  margin-bottom: 15px;
-}
-
-.info {
+.mainContacto .contacto form {
   border: 5px solid rgb(52, 211, 123);
   background-color: rgb(199, 255, 199);
   border-radius: 25px;
@@ -268,13 +376,78 @@ textarea {
   padding: 23px 15px 15px;
   width: 260px;
 }
-
-.contFlex {
+@media (min-width: 768px) {
+  .mainContacto .contacto form {
+    width: 320px;
+  }
+}
+.mainContacto .contacto form input {
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+.mainContacto .contacto form textarea {
+  padding-left: 5px;
+}
+@media (min-width: 992px) {
+  .mainContacto .contacto form label:hover {
+    cursor: pointer;
+  }
+}
+.mainContacto .contacto form div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.mainContacto .contacto form div button {
+  border: 2px solid rgb(0, 212, 71);
+  padding: 3px 7px;
+  border-radius: 15px;
+  background-color: #fff;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
 
+/*Extraido de bootstrap*/
+.divPreguntas {
+  margin-top: 35px;
+}
+
+.h2Preg {
+  margin-bottom: 25px;
+}
+
+.buttonAcordeon {
+  color: rgb(22, 109, 0);
+}
+
+.accordion-button:not(.collapsed) {
+  color: rgb(22, 109, 0);
+  background-color: #fff;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.divAcordeonItem {
+  margin: 10px 0px;
+  width: 95%;
+}
+
+.accordion-item {
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .divAcordeonItem {
+    width: 90%;
+  }
+}
+:root {
+  --bs-font-sans-serif: ;
+}
+
+/*contacto html*/
 /*Jugos y Licuados html*/
 .divDiferencias {
   margin-top: 25px;
@@ -327,40 +500,6 @@ span {
 }
 
 /*Preguntas Frecuentes*/
-.divPreguntas {
-  margin-top: 35px;
-}
-
-.h2Preg {
-  margin-bottom: 25px;
-}
-
-.buttonAcordeon {
-  color: rgb(22, 109, 0);
-}
-
-.accordion-button:not(.collapsed) {
-  color: rgb(22, 109, 0);
-  background-color: #fff;
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-}
-
-.divAcordeonItem {
-  margin: 10px 0px;
-  width: 95%;
-}
-
-.accordion-item {
-  padding-top: 0;
-}
-
-button, input, optgroup, select, textarea {
-  margin-top: 0%;
-}
-
 /*BOWLS html*/
 .seccionesBowl {
   border: 3px solid rgb(0, 212, 71);
@@ -405,47 +544,7 @@ button, input, optgroup, select, textarea {
   }
 }
 @media (min-width: 768px) {
-  nav ul {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-  .titulo {
-    margin-bottom: 30px;
-  }
-  li a {
-    padding: 4px 6px;
-  }
-  footer {
-    grid-template-areas: "seccionfooter news";
-  }
-  .newsletter {
-    margin-top: 30px;
-    width: 90%;
-  }
-  .sectionFooter {
-    margin-top: 29px;
-  }
-  .inputFooter {
-    padding: 5px 50px 5px 5px;
-  }
-  .secciones, .seccionesImg, .contRedes {
-    border: 4px solid rgb(0, 212, 71);
-  }
-  .seccionesImg {
-    width: 60%;
-  }
-  .sectionFooter {
-    width: 90%;
-  }
-  .tituloImg, .tituloIntro {
-    font-size: 35px;
-  }
   /*Contacto html*/
-  .info {
-    width: 320px;
-  }
-  .contenedorTituloContacto {
-    width: 80%;
-  }
   /*Jugos y Licuados*/
   .gridJugos {
     grid-template-columns: 1fr 1fr;
@@ -454,9 +553,6 @@ button, input, optgroup, select, textarea {
     width: 300px;
   }
   /*Preguntas*/
-  .divAcordeonItem {
-    width: 90%;
-  }
   /*BOWLS*/
   .divContTodosLosBowls {
     display: flex;
@@ -532,24 +628,6 @@ button, input, optgroup, select, textarea {
     box-shadow: 0px 0px 5px 1px rgb(34, 133, 34);
   }
   /*Contacto html*/
-  .mainContacto {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 1000px;
-  }
-  .contenedorTituloContacto {
-    width: 35%;
-    height: 200px;
-    margin-bottom: 360px;
-  }
-  .contacto {
-    margin-right: 50px;
-  }
-  label:hover {
-    cursor: pointer;
-  }
   /*Jugos Y Licuados*/
   .pDiferencias {
     width: 75%;

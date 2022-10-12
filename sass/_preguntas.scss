@@ -1,0 +1,40 @@
+
+/*Extraido de bootstrap*/
+
+.divPreguntas{
+    margin-top: 35px;
+}
+
+.h2Preg{
+    margin-bottom: 25px;
+}
+
+.buttonAcordeon{
+    color: rgb(22, 109, 0);
+}
+
+.accordion-button:not(.collapsed){
+    color: rgb(22, 109, 0);
+    background-color: #fff;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.divAcordeonItem{
+    margin: 10px 0px;
+    width: 95%;
+}
+
+.accordion-item{
+    padding-top: 0;
+
+}
+
+@media(min-width: 768px){
+    .divAcordeonItem{
+        width: 90%;
+    }
+}
+
