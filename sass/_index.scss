@@ -9,34 +9,26 @@ main{
     gap: 20px;
 }
 
-.seccionesImg{
+.seccionesImg{ 
+    @include flexColumnCenter;
     grid-area: imagen; 
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    border: 3px solid rgb(0, 212, 71);
+    width: $widthSections;
+    border: 3px solid $border;
     border-radius: 25px;
     padding: 0.8em;
-    background-color: rgb(195, 255, 193);
+    background-color: $background;
     border-bottom-left-radius: 0%;
     border-top-right-radius: 0%;
     @media(min-width: 768px){
         width: 70%;
-        border: 4px solid rgb(0, 212, 71);
+        border: 4px solid $border;
     }
     @media(min-width: 992px){
         width: 60%;
     }
     h1{
-        text-align: center;
-        margin-top: 7px;
-        color: rgb(0, 48, 0);
-        font-size: 28px;
-        @media(min-width: 768px){
-            font-size: 35px;
-        }
+        @extend .tituloIntro;
     }
     img{
         width: 94%;
@@ -48,24 +40,19 @@ main{
 .introduccion{
     grid-area: section;
     h2{
-        color: rgb(0, 48, 0);
-        font-size: 28px;
-        margin-top: 5px;
-        text-align: center;
+        @extend .tituloIntro;
     }
     p{
-        margin: 20px 5px 10px 5px;
-        color: rgb(3, 37, 0);
-        font-size: large;
+        @extend .parrafoIntro;
         a{
             color: rgb(0, 139, 46);
             text-decoration: underline;
             &:active, &:visited{
-                color: rgb(14, 56, 14);
+                color: $colorGrueso;
             }
             @media(min-width: 992px){
                 &:hover{
-                    color: rgb(14, 56, 14);
+                    color: $colorGrueso;
                 }
             }
         }
@@ -75,10 +62,7 @@ main{
     grid-area: section2;
     margin-bottom: 20px;
     h2{
-        color: rgb(0, 48, 0);
-        font-size: 28px;
-        margin-top: 5px;
-        text-align: center;
+        @extend .tituloIntro;
     }
     h3{
         margin: 20px 0px 1em 0px;
@@ -98,6 +82,7 @@ main{
             @media(min-width: 992px){
                 padding: 3px 4px;
                 border-radius: 5px;
+                transition: all 0.1s ease-in;
                 &:hover{
                     background-color: rgb(156, 240, 135);
                     box-shadow: 0px 0px 5px 1px rgb(34, 133, 34);

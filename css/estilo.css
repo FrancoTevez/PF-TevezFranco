@@ -1,8 +1,114 @@
+@media (min-width: 992px) {
+  .transition, .mainContacto .contacto form, body footer .newsletter div, body footer .sectionFooter {
+    transition: all 0.1s ease-in;
+  }
+  .transition:hover, .mainContacto .contacto form:hover, body footer .newsletter div:hover, body footer .sectionFooter:hover {
+    box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
+  }
+}
+
+.parrafoIntro, .mainContacto .contenedorTituloContacto p, .introduccion p {
+  margin: 20px 5px 10px 5px;
+  color: rgb(0, 48, 0);
+  font-size: large;
+}
+
+@media (min-width: 992px) {
+  .animation, body footer .sectionFooter div a img, button {
+    transition: all 0.1s ease-in;
+  }
+}
+
+.tituloIntro, .gridSection h2, .introduccion h2, .seccionesImg h1 {
+  margin-top: 5px;
+  text-align: center;
+  color: rgb(0, 48, 0);
+  font-size: 28px;
+}
+@media (min-width: 768px) {
+  .tituloIntro, .gridSection h2, .introduccion h2, .seccionesImg h1 {
+    font-size: 35px;
+  }
+}
+
+.boton, .mainContacto .contacto form div button, body footer .newsletter div button {
+  border: 2px solid rgb(0, 212, 71);
+  padding: 3px 7px;
+  border-radius: 15px;
+  background-color: rgb(240, 255, 239);
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .boton:hover, .mainContacto .contacto form div button:hover, body footer .newsletter div button:hover {
+    padding: 3px 30px;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
 }
 
+html {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.secciones {
+  width: 90%;
+  border: 3px solid rgb(0, 212, 71);
+  border-radius: 25px;
+  padding: 0.8em;
+  background-color: rgb(195, 255, 193);
+  border-bottom-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+@media (min-width: 768px) {
+  .secciones {
+    border: 4px solid rgb(0, 212, 71);
+  }
+}
+@media (min-width: 992px) {
+  .secciones {
+    width: 80%;
+    border: 4px solid rgb(0, 212, 71);
+  }
+}
+
+.h2Preg {
+  margin-bottom: 25px;
+}
+
+button {
+  margin-top: 10px;
+}
+button:active {
+  transform: scale(0.9);
+}
+
+button, input, optgroup, select, textarea {
+  margin-top: 0%;
+}
+
+@media (min-width: 992px) {
+  .contenedorImgJugos, .contenedorRecetasBowls, .bowlToppingsContenedor, .liJugos {
+    transition: all 0.1s ease-in;
+  }
+  .contenedorImgJugos:hover, .contenedorRecetasBowls:hover, .bowlToppingsContenedor:hover {
+    box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
+  }
+  .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover {
+    box-shadow: 0px 0px 5px 1px rgb(1, 22, 1);
+  }
+  .liJugos:hover {
+    background-color: rgb(156, 240, 135);
+    box-shadow: 0px 0px 5px 1px rgb(34, 133, 34);
+  }
+}
 /*NESTING*/
 body {
   height: 100vh;
@@ -36,7 +142,7 @@ body header nav div .vidaVerde {
   body header nav div ul li a {
     margin: 0px 15px;
     color: rgb(71, 255, 47);
-    border: 1px solid rgb(75, 202, 75);
+    border: 1px solid rgb(0, 212, 71);
     border-radius: 15px;
   }
 }
@@ -56,16 +162,16 @@ body footer {
   }
 }
 body footer .sectionFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   grid-area: seccionfooter;
   margin-top: 15px;
   width: 90%;
   border: 3px solid rgb(0, 212, 71);
   border-radius: 15px;
-  background-color: rgb(173, 255, 170);
+  background-color: rgb(195, 255, 193);
   padding: 25px 25px 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 @media (min-width: 768px) {
   body footer .sectionFooter {
@@ -93,7 +199,7 @@ body footer .sectionFooter div a img:active {
   transform: scale(0.9);
 }
 @media (min-width: 992px) {
-  body footer .sectionFooter div a img {
+  body footer .sectionFooter div a img:hover {
     transform: translateY(-5px);
   }
 }
@@ -103,10 +209,10 @@ body footer .sectionFooter p {
   margin-top: 30px;
 }
 body footer .newsletter {
-  grid-area: news;
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-area: news;
   width: 90%;
 }
 @media (min-width: 768px) {
@@ -115,13 +221,13 @@ body footer .newsletter {
   }
 }
 body footer .newsletter div {
-  border: 3px solid rgb(0, 212, 71);
-  border-radius: 15px;
-  background-color: rgb(173, 255, 170);
-  padding: 25px 25px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 3px solid rgb(0, 212, 71);
+  border-radius: 15px;
+  background-color: rgb(195, 255, 193);
+  padding: 25px 25px 30px;
   width: 100%;
 }
 body footer .newsletter div h3 {
@@ -143,97 +249,6 @@ body footer .newsletter div input {
     width: 50%;
   }
 }
-body footer .newsletter div button {
-  border: 2px solid rgb(0, 212, 71);
-  padding: 3px 7px;
-  border-radius: 15px;
-  background-color: #fff;
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-@media (min-width: 992px) {
-  body footer .newsletter div button:hover {
-    padding: 3px 30px;
-  }
-}
-
-html {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  margin-top: 10px;
-  transition: all 0.1s ease;
-}
-button:active {
-  transform: scale(0.9);
-}
-
-.secciones {
-  width: 90%;
-  border: 3px solid rgb(0, 212, 71);
-  border-radius: 25px;
-  padding: 0.8em;
-  background-color: rgb(195, 255, 193);
-  border-bottom-left-radius: 0%;
-  border-top-right-radius: 0%;
-}
-@media (min-width: 768px) {
-  .secciones {
-    border: 4px solid rgb(0, 212, 71);
-  }
-}
-@media (min-width: 992px) {
-  .secciones {
-    width: 80%;
-    border: 4px solid rgb(0, 212, 71);
-  }
-}
-
-.tituloIntro {
-  margin-top: 5px;
-  text-align: center;
-  color: rgb(0, 48, 0);
-  font-size: 28px;
-}
-@media (min-width: 768px) {
-  .tituloIntro {
-    font-size: 35px;
-  }
-}
-
-.parrafoIntro {
-  margin: 20px 5px 10px 5px;
-  color: rgb(3, 37, 0);
-  font-size: large;
-}
-
-.contFlex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-button, input, optgroup, select, textarea {
-  margin-top: 0%;
-}
-
-.h2Preg {
-  margin-bottom: 25px;
-}
-
-@media (min-width: 992px) {
-  .contRedes:hover, .info:hover, .contenedorImgJugos:hover, .contenedorRecetasBowls:hover, .bowlToppingsContenedor:hover {
-    box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
-  }
-  .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover {
-    box-shadow: 0px 0px 15px 0px rgb(1, 22, 1);
-  }
-}
 main {
   display: grid;
   grid-template-areas: "imagen" "section" "section2";
@@ -243,11 +258,11 @@ main {
 }
 
 .seccionesImg {
-  grid-area: imagen;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-area: imagen;
+  margin-top: 20px;
   width: 90%;
   border: 3px solid rgb(0, 212, 71);
   border-radius: 25px;
@@ -267,17 +282,6 @@ main {
     width: 60%;
   }
 }
-.seccionesImg h1 {
-  text-align: center;
-  margin-top: 7px;
-  color: rgb(0, 48, 0);
-  font-size: 28px;
-}
-@media (min-width: 768px) {
-  .seccionesImg h1 {
-    font-size: 35px;
-  }
-}
 .seccionesImg img {
   width: 94%;
   margin-top: 7px;
@@ -288,39 +292,22 @@ main {
 .introduccion {
   grid-area: section;
 }
-.introduccion h2 {
-  color: rgb(0, 48, 0);
-  font-size: 28px;
-  margin-top: 5px;
-  text-align: center;
-}
-.introduccion p {
-  margin: 20px 5px 10px 5px;
-  color: rgb(3, 37, 0);
-  font-size: large;
-}
 .introduccion p a {
   color: rgb(0, 139, 46);
   text-decoration: underline;
 }
 .introduccion p a:active, .introduccion p a:visited {
-  color: rgb(14, 56, 14);
+  color: rgb(0, 48, 0);
 }
 @media (min-width: 992px) {
   .introduccion p a:hover {
-    color: rgb(14, 56, 14);
+    color: rgb(0, 48, 0);
   }
 }
 
 .gridSection {
   grid-area: section2;
   margin-bottom: 20px;
-}
-.gridSection h2 {
-  color: rgb(0, 48, 0);
-  font-size: 28px;
-  margin-top: 5px;
-  text-align: center;
 }
 .gridSection h3 {
   margin: 20px 0px 1em 0px;
@@ -343,6 +330,7 @@ main {
   .gridSection ul li {
     padding: 3px 4px;
     border-radius: 5px;
+    transition: all 0.1s ease-in;
   }
   .gridSection ul li:hover {
     background-color: rgb(156, 240, 135);
@@ -392,11 +380,6 @@ main {
 .mainContacto .contenedorTituloContacto h1 {
   margin-bottom: 25px;
 }
-.mainContacto .contenedorTituloContacto p {
-  margin: 20px 5px 10px 5px;
-  color: rgb(3, 37, 0);
-  font-size: large;
-}
 @media (min-width: 768px) {
   .mainContacto .contenedorTituloContacto p {
     width: 70%;
@@ -415,8 +398,8 @@ main {
   }
 }
 .mainContacto .contacto form {
-  border: 5px solid rgb(52, 211, 123);
-  background-color: rgb(199, 255, 199);
+  border: 5px solid rgb(0, 212, 71);
+  background-color: rgb(195, 255, 193);
   border-radius: 25px;
   box-shadow: 0px 0px 5px 0px;
   display: flex;
@@ -446,20 +429,6 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.mainContacto .contacto form div button {
-  border: 2px solid rgb(0, 212, 71);
-  padding: 3px 7px;
-  border-radius: 15px;
-  background-color: #fff;
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-@media (min-width: 992px) {
-  .mainContacto .contacto form div button:hover {
-    padding: 3px 30px;
-  }
-}
-
 /*Extraido de bootstrap*/
 .divPreguntas {
   margin-top: 35px;
@@ -471,6 +440,7 @@ main {
 
 .buttonAcordeon {
   color: rgb(22, 109, 0);
+  transition: all 0.1s ease;
 }
 
 .accordion-button:not(.collapsed) {
@@ -496,11 +466,25 @@ main {
     width: 90%;
   }
 }
+@media (min-width: 992px) {
+  .transition, body footer .sectionFooter, body footer .newsletter div, .mainContacto .contacto form {
+    transition: all 0.1s ease-in;
+  }
+  .transition:hover, body footer .sectionFooter:hover, body footer .newsletter div:hover, .mainContacto .contacto form:hover {
+    box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
+  }
+}
+
+.contFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 :root {
   --bs-font-sans-serif: ;
 }
 
-/*contacto html*/
 /*Jugos y Licuados html*/
 .divDiferencias {
   margin-top: 25px;
@@ -552,7 +536,6 @@ span {
   margin: 10px 0px;
 }
 
-/*Preguntas Frecuentes*/
 /*BOWLS html*/
 .seccionesBowl {
   border: 3px solid rgb(0, 212, 71);
@@ -597,7 +580,6 @@ span {
   }
 }
 @media (min-width: 768px) {
-  /*Contacto html*/
   /*Jugos y Licuados*/
   .gridJugos {
     grid-template-columns: 1fr 1fr;
@@ -605,7 +587,6 @@ span {
   .contenedorImgJugos {
     width: 300px;
   }
-  /*Preguntas*/
   /*BOWLS*/
   .divContTodosLosBowls {
     display: flex;
@@ -629,20 +610,6 @@ span {
   }
 }
 @media (min-width: 992px) {
-  .contRedes:hover, .info:hover, .contenedorImgJugos:hover, .contenedorRecetasBowls:hover, .bowlToppingsContenedor:hover {
-    box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
-  }
-  .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover {
-    box-shadow: 0px 0px 15px 0px rgb(1, 22, 1);
-  }
-  .boton:hover {
-    padding: 3px 30px;
-  }
-  .liJugos:hover {
-    background-color: rgb(156, 240, 135);
-    box-shadow: 0px 0px 5px 1px rgb(34, 133, 34);
-  }
-  /*Contacto html*/
   /*Jugos Y Licuados*/
   .pDiferencias {
     width: 75%;

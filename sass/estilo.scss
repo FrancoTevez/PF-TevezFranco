@@ -1,14 +1,32 @@
-
+@import "variables";
+@import "mixinyextends";
 @import "general";
 @import "index";
 @import "contacto";
 @import "preguntas";
 
+.transition{
+    @media(min-width: 992px){
+        transition: all 0.1s ease-in;
+        &:hover{
+            box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
+        }
+    }
+}
+
+@mixin flexColumnCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contFlex{
+    @include flexColumnCenter;
+}
+
 :root{
     --bs-font-sans-serif: ;
 }
-
-/*contacto html*/
 
 /*Jugos y Licuados html*/
 
@@ -62,9 +80,6 @@ span{
     margin: 10px 0px;
 }
 
-/*Preguntas Frecuentes*/
-
-
 /*BOWLS html*/
 
 .seccionesBowl{
@@ -101,6 +116,7 @@ span{
     margin: 35px 0px;
 }
 
+
 @media(min-width: 580px){
     .gridJugos{
         grid-template-columns: 1fr 1fr;
@@ -111,9 +127,8 @@ span{
     }
 }
 
+
 @media(min-width: 768px){
-   
-    /*Contacto html*/
 
     /*Jugos y Licuados*/
 
@@ -125,15 +140,12 @@ span{
         width: 300px;
     }
 
-    /*Preguntas*/
-
     /*BOWLS*/
 
     .divContTodosLosBowls{
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: space-around;
+        @include flexRow;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .contenedorRecetasBowls{
@@ -155,26 +167,6 @@ span{
 }
 
 @media(min-width: 992px){
-
-    .contRedes:hover, .info:hover, .contenedorImgJugos:hover, .contenedorRecetasBowls:hover, .bowlToppingsContenedor:hover{
-        box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
-    }
-    .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover{
-        box-shadow: 0px 0px 15px 0px rgb(1, 22, 1);
-    } 
-
-    .boton:hover{
-        padding: 3px 30px;
-    }
-
-    .liJugos:hover{
-        background-color: rgb(156, 240, 135);
-        box-shadow: 0px 0px 5px 1px rgb(34, 133, 34);
-    }
-
-    /*Contacto html*/
-
-    
 
     /*Jugos Y Licuados*/
 

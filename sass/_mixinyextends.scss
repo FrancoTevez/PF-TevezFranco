@@ -1,0 +1,56 @@
+.transition{
+    @media(min-width: 992px){
+        transition: all 0.1s ease-in;
+        &:hover{
+            box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
+        }
+    }
+}
+
+@mixin flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexColumnCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parrafoIntro{
+    margin: 20px 5px 10px 5px;
+    color: $colorGrueso;
+    font-size: large;
+}
+
+.animation{
+    @media(min-width: 992px){
+        transition: all 0.1s ease-in;
+    }
+        
+}
+
+.tituloIntro{
+    margin-top: 5px;
+    text-align: center;
+    color: $colorGrueso;
+    font-size: 28px;
+    @media(min-width: 768px){
+        font-size: 35px;
+    }
+}
+
+.boton{
+    border: 2px solid $border;
+    padding: 3px 7px;
+    border-radius: 15px;
+    background-color: rgb(240, 255, 239);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    @media(min-width: 992px){
+        &:hover{
+        padding: 3px 30px;
+        }
+    }
+}

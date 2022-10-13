@@ -3,6 +3,63 @@
     margin: 0;
 }
 
+html{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.secciones{
+    width: $widthSections;
+    border: 3px solid $border;
+    border-radius: 25px;
+    padding: 0.8em;
+    background-color: $background;
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: 0%;
+    @media(min-width: 768px){
+        border: 4px solid $border;
+    }
+    @media(min-width: 992px){
+        width: 80%;
+        border: 4px solid $border;
+    }
+}
+
+.h2Preg{
+    margin-bottom: 25px;
+}
+
+button{
+    margin-top: 10px;
+    @extend .animation;
+    &:active{
+        transform: scale(0.9);
+    }
+}
+
+button, input, optgroup, select, textarea{
+    margin-top: 0%;
+}
+
+@media(min-width: 992px){
+    .contenedorImgJugos, .contenedorRecetasBowls, .bowlToppingsContenedor, .liJugos{
+        transition: all 0.1s ease-in;
+    }
+    .contenedorImgJugos:hover, .contenedorRecetasBowls:hover, .bowlToppingsContenedor:hover{
+        box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
+    }
+    .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover{
+        box-shadow: 0px 0px 5px 1px rgb(1, 22, 1);
+    } 
+    .liJugos:hover{
+        background-color: rgb(156, 240, 135);
+        box-shadow: 0px 0px 5px 1px rgb(34, 133, 34);
+    }
+}
+
 /*NESTING*/
 
 body{
@@ -35,7 +92,7 @@ body{
                             @media(min-width: 992px){
                                 margin: 0px 15px;
                                 color: rgb(71, 255, 47);
-                                border: 1px solid rgb(75, 202, 75);
+                                border: 1px solid $border;
                                 border-radius: 15px;
                             }
                         }
@@ -60,38 +117,39 @@ body{
             "seccionfooter news";
         }
         .sectionFooter{
+            @include flexColumnCenter;
+            @extend .transition;
             grid-area: seccionfooter;
             margin-top: 15px;
-            width: 90%;
-            border: 3px solid rgb(0, 212, 71);
+            width: $widthSections;
+            border: 3px solid $border;
             border-radius: 15px;
-            background-color: rgb(173, 255, 170);
+            background-color: $background;
             padding: 25px 25px 22px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             @media(min-width: 768px){
                 margin-top: 29px;
             }
             h3{
-                color: rgb(0, 48, 0);
+                color: $colorGrueso;
                 font-size: 27px;
             }
             div{
                 margin-top: 15px;
-                display: flex;
-                flex-direction: row;
+                @include flexRow;
                 justify-content: center;
                 a{
                     margin: 0px 25px 0px 25px;
                     img{
+                        @extend .animation;
                         width: 35px;
                         height: 35px;
                         &:active{
                             transform: scale(0.9);
                         }
                         @media(min-width: 992px){
-                            transform: translateY(-5px);
+                            &:hover{
+                                transform: translateY(-5px);
+                            }
                         }
                     }
                 }
@@ -103,26 +161,23 @@ body{
             }
         }
         .newsletter{
+            @include flexColumnCenter;
             grid-area: news;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
+            width: $widthSections;
             @media(min-width: 768px){
                 margin-top: 30px;
             }
             div{
-                border: 3px solid rgb(0, 212, 71);
+                @include flexColumnCenter;
+                @extend .transition;
+                border: 3px solid $border;
                 border-radius: 15px;
-                background-color: rgb(173, 255, 170);
+                background-color: $background;
                 padding: 25px 25px 30px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
                 width: 100%;
                 
                 h3{
-                    color: rgb(0, 48, 0);
+                    color: $colorGrueso;
                     font-size: 27px;
                 }
                 input{
@@ -137,82 +192,10 @@ body{
                     }
                 }
                 button{
-                    border: 2px solid rgb(0, 212, 71);
-                    padding: 3px 7px;
-                    border-radius: 15px;
-                    background-color: #fff;
-                    margin-top: 15px;
-                    margin-bottom: 20px;
-                    @media(min-width: 992px){
-                        &:hover{
-                            padding: 3px 30px;
-                        }
-                    }
+                    @extend .boton;
                 }
             }
         }
     }
 }
 
-html{
-    font-family: 'Josefin Sans', sans-serif;
-}
-a{
-    text-decoration: none;
-}
-button{
-    margin-top: 10px;
-    transition: all 0.1s ease;
-    &:active{
-        transform: scale(0.9);
-    }
-}
-.secciones{
-    width: 90%;
-    border: 3px solid rgb(0, 212, 71);
-    border-radius: 25px;
-    padding: 0.8em;
-    background-color: rgb(195, 255, 193);
-    border-bottom-left-radius: 0%;
-    border-top-right-radius: 0%;
-    @media(min-width: 768px){
-        border: 4px solid rgb(0, 212, 71);
-    }
-    @media(min-width: 992px){
-        width: 80%;
-        border: 4px solid rgb(0, 212, 71);
-    }
-}
-.tituloIntro{
-    margin-top: 5px;
-    text-align: center;
-    color: rgb(0, 48, 0);
-    font-size: 28px;
-    @media(min-width: 768px){
-        font-size: 35px;
-    }
-}
-.parrafoIntro{
-    margin: 20px 5px 10px 5px;
-    color: rgb(3, 37, 0);
-    font-size: large;
-}
-.contFlex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-button, input, optgroup, select, textarea{
-    margin-top: 0%;
-}
-.h2Preg{
-    margin-bottom: 25px;
-}
-@media(min-width: 992px){
-   .contRedes:hover, .info:hover, .contenedorImgJugos:hover, .contenedorRecetasBowls:hover, .bowlToppingsContenedor:hover{
-        box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
-    }
-    .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover{
-        box-shadow: 0px 0px 15px 0px rgb(1, 22, 1);
-    } 
-}
