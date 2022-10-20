@@ -52,7 +52,10 @@ button, input, optgroup, select, textarea{
         box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
     }
     .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover{
-        box-shadow: 0px 0px 5px 1px rgb(1, 22, 1);
+        -webkit-box-shadow: 0px 3px 6px 3px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 3px 6px 3px rgba(0,0,0,0.75);
+        box-shadow: 0px 3px 6px 3px rgba(0,0,0,0.75);
+        transition: all 0.1s ease-in;
     } 
     .liJugos:hover{
         background-color: rgb(156, 240, 135);
@@ -92,8 +95,7 @@ body{
                             @media(min-width: 992px){
                                 margin: 0px 15px;
                                 color: rgb(71, 255, 47);
-                                border: 1px solid $border;
-                                border-radius: 15px;
+                                border-bottom: 2px solid $border;
                             }
                         }
                     }
