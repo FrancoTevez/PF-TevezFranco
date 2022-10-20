@@ -58,8 +58,10 @@ a {
   text-decoration: none;
 }
 
-.mainVh {
-  height: 100vh;
+@media (max-width: 992px) {
+  .mainVh {
+    margin-bottom: 353px;
+  }
 }
 
 .secciones {
@@ -350,11 +352,15 @@ main {
 .mainContacto {
   background-image: url(../img/fondoContacto.jpg);
   background-size: cover;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+@media (max-width: 992px) {
+  .mainContacto {
+    height: 1200px;
+  }
 }
 @media (min-width: 992px) {
   .mainContacto {

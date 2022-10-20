@@ -12,7 +12,9 @@ a{
 }
 
 .mainVh{
-    height: 100vh;
+    @media(max-width: 992px){
+        margin-bottom: 353px;
+    }
 }
 
 .secciones{

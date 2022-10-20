@@ -1,7 +1,9 @@
 .mainContacto{
     background-image: url(../img/fondoContacto.jpg);
     background-size: cover;
-    height: 100vh;
+    @media(max-width: 992px){
+        height: 1200px;
+    }
     @include flexColumnCenter;
     justify-content: space-around;
     @media(min-width: 992px){
