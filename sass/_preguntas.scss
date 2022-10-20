@@ -12,6 +12,9 @@
 .buttonAcordeon{
     color: rgb(22, 109, 0);
     transition: all 0.1s ease;
+    &:active{
+        transform: scale(0.98);
+    }
 }
 
 .accordion-button:not(.collapsed){
@@ -39,3 +42,7 @@
     }
 }
 
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}

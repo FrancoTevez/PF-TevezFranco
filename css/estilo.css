@@ -58,6 +58,10 @@ a {
   text-decoration: none;
 }
 
+.mainVh {
+  height: 100vh;
+}
+
 .secciones {
   width: 90%;
   border: 3px solid rgb(0, 212, 71);
@@ -102,8 +106,8 @@ button, input, optgroup, select, textarea {
     box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
   }
   .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover {
-    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.75);
     transition: all 0.1s ease-in;
+    box-shadow: 0px -4px 7px 0px rgba(92, 92, 92, 0.63);
   }
   .liJugos:hover {
     background-color: rgb(156, 240, 135);
@@ -144,6 +148,8 @@ body header nav div .vidaVerde {
     margin: 0px 15px;
     color: rgb(71, 255, 47);
     border-bottom: 2px solid rgb(0, 212, 71);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
   }
 }
 body footer {
@@ -342,8 +348,9 @@ main {
 }
 
 .mainContacto {
-  background-image: url(https://images.pexels.com/photos/1358900/pexels-photo-1358900.jpeg?cs=srgb&dl=pexels-rene-asmussen-1358900.jpg&fm=jpg);
+  background-image: url(../img/fondoContacto.jpg);
   background-size: cover;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -356,6 +363,7 @@ main {
     justify-content: space-around;
     align-items: center;
     height: 1000px;
+    background-image: url(https://images.pexels.com/photos/1358900/pexels-photo-1358900.jpeg?cs=srgb&dl=pexels-rene-asmussen-1358900.jpg&fm=jpg);
   }
 }
 .mainContacto .contenedorTituloContacto {
@@ -442,6 +450,9 @@ main {
   color: rgb(22, 109, 0);
   transition: all 0.1s ease;
 }
+.buttonAcordeon:active {
+  transform: scale(0.98);
+}
 
 .accordion-button:not(.collapsed) {
   color: rgb(22, 109, 0);
@@ -466,6 +477,11 @@ main {
     width: 90%;
   }
 }
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 @media (min-width: 992px) {
   .transition, body footer .sectionFooter, body footer .newsletter div, .mainContacto .contacto form {
     transition: all 0.1s ease-in;

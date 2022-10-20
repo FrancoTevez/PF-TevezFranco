@@ -11,6 +11,10 @@ a{
     text-decoration: none;
 }
 
+.mainVh{
+    height: 100vh;
+}
+
 .secciones{
     width: $widthSections;
     border: 3px solid $border;
@@ -52,10 +56,8 @@ button, input, optgroup, select, textarea{
         box-shadow: 0px 0px 12px 3px rgb(35, 129, 35);
     }
     .aInicio, .aJugosLicuados, .aPreguntas, .aBowls, .aContacto, li a:hover{
-        -webkit-box-shadow: 0px 3px 6px 3px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 3px 6px 3px rgba(0,0,0,0.75);
-        box-shadow: 0px 3px 6px 3px rgba(0,0,0,0.75);
         transition: all 0.1s ease-in;
+        box-shadow: 0px -4px 7px 0px rgba( 92, 92, 92 , 0.63 );
     } 
     .liJugos:hover{
         background-color: rgb(156, 240, 135);
@@ -96,6 +98,8 @@ body{
                                 margin: 0px 15px;
                                 color: rgb(71, 255, 47);
                                 border-bottom: 2px solid $border;
+                                border-top-left-radius: 3px;
+                                border-top-right-radius: 3px;
                             }
                         }
                     }
