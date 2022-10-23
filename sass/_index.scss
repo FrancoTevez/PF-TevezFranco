@@ -9,53 +9,37 @@ main{
     gap: 20px;
 }
 
-.seccionesImg{ 
-    @include flexColumnCenter;
-    grid-area: imagen; 
-    margin-top: 20px;
-    width: $widthSections;
-    border: 3px solid $border;
-    border-radius: 25px;
-    padding: 0.8em;
-    background-color: $background;
-    border-bottom-left-radius: 0%;
-    border-top-right-radius: 0%;
-    @media(min-width: 768px){
-        width: 70%;
-        border: 4px solid $border;
-    }
-    @media(min-width: 992px){
-        width: 60%;
-    }
+.introduccion{
+    grid-area: section;
     h1{
         @extend .tituloIntro;
     }
-    img{
-        width: 94%;
-        margin-top: 7px;
-        border-radius: 25px;
-        margin-bottom: 7px;
-    }
-}
-.introduccion{
-    grid-area: section;
-    h2{
-        @extend .tituloIntro;
-    }
-    p{
-        @extend .parrafoIntro;
-        a{
-            color: rgb(0, 139, 46);
-            text-decoration: underline;
-            &:active, &:visited{
-                color: $colorGrueso;
+    .contRow{
+        @include flexRow;
+        img{
+            display: none;
+            @media(min-width: 1440px){
+                display: block;
+                margin: 20px 30px 20px 85px;
+                height: 318px;
             }
-            @media(min-width: 992px){
-                &:hover{
+            
+        }
+        p{
+            @extend .parrafoIntro;
+            a{
+                color: rgb(0, 139, 46);
+                text-decoration: underline;
+                &:active, &:visited{
                     color: $colorGrueso;
                 }
+                @media(min-width: 992px){
+                    &:hover{
+                        color: $colorGrueso;
+                    }
+                }
             }
-        }
+        }   
     }
 }
 .gridSection{

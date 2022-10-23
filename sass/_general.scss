@@ -12,7 +12,7 @@ a{
 }
 
 .mainVh{
-    @media(max-width: 992px){
+    @media(max-width: 992px) and (min-width: 768px){
         margin-bottom: 353px;
     }
 }
