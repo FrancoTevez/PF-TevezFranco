@@ -25,21 +25,23 @@ main{
             }
             
         }
-        p{
-            @extend .parrafoIntro;
-            a{
-                color: rgb(0, 139, 46);
-                text-decoration: underline;
-                &:active, &:visited{
-                    color: $colorGrueso;
-                }
-                @media(min-width: 992px){
-                    &:hover{
+        div{
+            p{
+                @extend .parrafoIntro;
+                a{
+                    color: rgb(0, 139, 46);
+                    text-decoration: underline;
+                    &:active, &:visited{
                         color: $colorGrueso;
                     }
+                    @media(min-width: 992px){
+                        &:hover{
+                            color: $colorGrueso;
+                        }
+                    }
                 }
-            }
-        }   
+            }   
+        }  
     }
 }
 .gridSection{
