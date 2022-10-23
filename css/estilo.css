@@ -7,7 +7,7 @@
   }
 }
 
-.parrafoIntro, .mainContacto .contenedorTituloContacto p, .introduccion .contRow p {
+.parrafoIntro, .mainContacto .contenedorTituloContacto p, .introduccion .contRow div p {
   margin: 20px 5px 10px 5px;
   color: rgb(0, 48, 0);
   font-size: large;
@@ -282,15 +282,15 @@ main {
     height: 318px;
   }
 }
-.introduccion .contRow p a {
+.introduccion .contRow div p a {
   color: rgb(0, 139, 46);
   text-decoration: underline;
 }
-.introduccion .contRow p a:active, .introduccion .contRow p a:visited {
+.introduccion .contRow div p a:active, .introduccion .contRow div p a:visited {
   color: rgb(0, 48, 0);
 }
 @media (min-width: 992px) {
-  .introduccion .contRow p a:hover {
+  .introduccion .contRow div p a:hover {
     color: rgb(0, 48, 0);
   }
 }
